@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import ButtonPanel from "./components/ButtonPanel";
 import Display from "./components/Display";
+import calculate from "./logic/calculate";
 export default class App extends React.Component {
     state = {
         total: null,
@@ -10,7 +11,7 @@ export default class App extends React.Component {
     };
 
     handleClick = (buttonName) => {
-        // TODO
+        this.state(calculate(this.state, buttonName));
     };
     render() {
         return (
