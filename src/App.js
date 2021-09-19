@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ButtonPanel from "./components/ButtonPanel";
 export default class App extends React.Component {
     state = {
         total: null,
@@ -11,6 +12,10 @@ export default class App extends React.Component {
         // TODO
     };
     render() {
-        return <div className="component-app">{/* TODO */}</div>;
+        return (
+            <div className="component-app">
+                <ButtonPanel clickHandler={this.handleClick} />
+            </div>
+        );
     }
 }
